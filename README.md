@@ -55,7 +55,7 @@ In support group you can ask for help, discover/request new features, report bug
 Please make sure to use python3.6, as I cannot guarantee everything will work as expected on older Python versions!
 This is because markdown parsing is done by iterating through a dict, which is ordered by default in 3.6.
  
- <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Blank-sama/KOMIREPO"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<a href="https://heroku.com/deploy?template=https://github.com/Blank-sama/KOMIREPO"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a>
 
   ### Configuration
 
