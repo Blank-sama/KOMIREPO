@@ -1,12 +1,11 @@
 import threading
-
 from AstrakoBot.modules.sql import BASE, SESSION
-from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
+from sqlalchemy import Boolean, Column, String, UnicodeText, BigInteger
 
 
 class GloballyBannedUsers(BASE):
     __tablename__ = "gbans"
-    user_id = Column(Integer, primary_key=True)
+    user_id = Column(BigInteger, primary_key=True)
     name = Column(UnicodeText, nullable=False)
     reason = Column(UnicodeText)
 
@@ -16,10 +15,10 @@ class GloballyBannedUsers(BASE):
         self.reason = reason
 
     def __repr__(self):
-        return "<GBanned User {} ({})>".format(self.name, self.user_id)
+        return "<GBanned User {} ({}) (({}))>".format(self.name, self.user_id )
 
     def to_dict(self):
-        return {"user_id": self.user_id, "name": self.name, "reason": self.reason}
+        return {"user_id": self.user_id,"name": self.name, "reason": self.reason}
 
 
 class GbanSettings(BASE):
@@ -159,6 +158,9 @@ def migrate_chat(old_chat_id, new_chat_id):
             SESSION.add(chat)
 
         SESSION.commit()
+        
+
+    
 
 
 # Create in memory userid to avoid disk access
