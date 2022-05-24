@@ -1,5 +1,5 @@
 import threading
-from KomiRobot.modules.sql import BASE, SESSION
+from AstrakoBot.modules.sql import BASE, SESSION
 from sqlalchemy import Column, UnicodeText
 from sqlalchemy.sql.sqltypes import BigInteger
 
